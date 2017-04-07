@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+<title>mongo</title>
+<script th:inline="javascript">
+var mongodata = [[${mongodata}]];
+</script>
+</head>
+<body>
+	<div th:text="${mongodata}"></div>
+	<div th:switch="${mongodata}">
+		<p th:case="${mongodata}">ee ${mongodata.ip_address}</p>
+		<p th:case="*">all</p>
+	</div>
+</body>
+</html>
